@@ -12,7 +12,7 @@
         x-show="sidenav"
         @click.away="sidenav = false"
       >
-        <div class="space-y-6 md:space-y-10 mt-10">
+        <div class="space-y-6 md:space-y-10 mt-12">
           <!-- <div id="profile" class="">
             <div class='flex items-center justify-center'>
               <h2
