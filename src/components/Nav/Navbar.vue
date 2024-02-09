@@ -1,7 +1,7 @@
 <template lang="">
-    <nav class="bg-white sticky rounded-md top-0 z-50  border-gray-200 px-4 lg:px-6 py-2.5 sm:pl-64 dark:bg-gray-800">
-          <div class="flex flex-wrap justify-between items-center mx-auto px-4">
-              <div class="flex justify-start items-center">
+    <nav class="bg-white sticky top-0 z-50  border-gray-200 px-4 lg:px-6 py-2.5 h-[60px] sm:pl-64 dark:bg-gray-800">
+          <div class="flex h-full flex-wrap justify-between items-center mx-auto px-4">
+              <div class="flex h-full justify-start items-center">
                     <button class="bg-gray-100 p-2 rounded-md sm:hidden" data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar"
                         aria-controls="default-sidebar" type="button">
                 

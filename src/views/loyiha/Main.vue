@@ -1,5 +1,5 @@
 <template>
-<h1>Salom Loyiha</h1>
+<h1></h1>
 </template>
 <script setup>
 </script>

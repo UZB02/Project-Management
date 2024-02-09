@@ -1,18 +1,20 @@
 <template >
     <!-- component -->
-    <div class="container flex items-center justify-between">
-           <div class="left">
-        <AppNavigation />
-            </div>
-        <div class="right"  style="width: 95%;">
-            <div class="top sticky top-0 z-50">
+    <section>
+        <div class="container flex">
+           <div class="h-screen sticky top-0 left-0">
+             <AppNavigation/>
+           </div>
+            <div class="w-full rounded-md bg-blue-100">
+                 <header class="sticky top-0 z-50">
                 <Nav/>
-            </div>
-              <div class="p-4  rounded-md bg-gray-100 min-h-screen">
-                <RouterView />
+            </header>
+                <div class="rounded-md p-3">
+                    <RouterView/>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 <script setup>
 import { RouterView } from 'vue-router';

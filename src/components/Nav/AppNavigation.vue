@@ -1,7 +1,7 @@
 <template>
-    <aside id="default-sidebar" style="transition: all .3s linear;" :class="isOpen ? 'w-20  fixed top-0 left-0 z-40 h-screen transition-transform -translate-x-full sm:translate-x-0' : 'w-60  fixed top-0 left-0 z-40 h-screen transition-transform -translate-x-full sm:translate-x-0'" aria-label="Sidebar">
+    <aside id="default-sidebar" style="transition: all .3s linear;" :class="isOpen ? 'w-20  sticky  left-0 z-40 h-screen transition-transform -translate-x-full sm:translate-x-0' : 'w-60  sticky left-0 z-40 h-screen transition-transform -translate-x-full sm:translate-x-0'" aria-label="Sidebar">
    <div class="h-full px-3 overflow-y-auto bg-white dark:bg-gray-800">
-    <div :class="isOpen ? 'flex flex-col-reverse w-full h-1/5 gap-2 items-center justify-center' : 'w-full h-1/5 flex items-center justify-between'">
+    <div :class="isOpen ? 'flex flex-col-reverse w-full py-3 gap-2 items-center justify-center' : 'w-full  flex items-center py-3 justify-between'">
        <button @click="toggleOpen" class="bg-gray-100 p-2 rounded-md">
                         <svg width="24" height="24" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
