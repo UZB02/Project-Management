@@ -2,22 +2,19 @@
    <section>
       <div class="container flex items-center flex-col gap-5">
          <div style="padding: 5px 50px;" data-aos="zoom-in-up" class="top bg-white rounded-lg flex items-center justify-between w-full">
-            <div class="left">
-               <form action="#" method="GET" class="hidden lg:block lg:pl-2">
-                  <label for="topbar-search" class="sr-only">Search</label>
-                  <div class="relative mt-1 lg:w-96">
-                     <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                        <svg class="w-4 h-4  text-gray-500 dark:text-gray-400" aria-hidden="true"
-                           xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-                        </svg>
-                     </div>
-                     <input type="text" name="email" id="topbar-search"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-9 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                        placeholder="Search">
-                  </div>
-               </form>
+            <div class="left w-1/4">
+         <form>   
+       <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+       <div class="relative">
+           <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+               <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+               </svg>
+           </div>
+           <input type="search" id="default-search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Mockups, Logos..." required>
+           <button type="submit" class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+       </div>
+   </form>
             </div>
             <div class="right">
                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Filter</label>
@@ -30,7 +27,7 @@
             </div>
          </div>
          <div class="bottom w-full flex flex-wrap items-center justify-center gap-3 p-2">
-             <div v-for="item in data"  style="width: 23%; transition: all .3s linear;" class="card cursor-pointer hover:scale-105 bg-white flex flex-col p-4 rounded-xl" data-aos="flip-right">
+             <div v-for="item in data" class="card cursor-pointer hover:scale-105 bg-white flex flex-col p-4 rounded-xl" data-aos="flip-right">
                   <div class="top flex w-full items-center justify-between border-b-2 pb-4">
                      <div class="left flex items-center justify-center gap-4">
                        <div v-html="item.svg" style="fill: gray;"></div>
@@ -504,4 +501,24 @@ const data = ref([
    },
 ])
 </script>
-<style scoped></style>
+<style scoped>
+section .container .bottom .card{
+   width: 23%; 
+   transition: all .3s linear;
+}
+@media screen and (min-width: 300px) and (max-width:600px) {
+   section .container .bottom .card{
+      width: 100%;
+   }
+}
+@media screen and (min-width: 600px) and (max-width:800px) {
+   section .container .bottom .card{
+      width: 80%;
+   }
+}
+@media screen and (min-width: 800px) and (max-width:1000px) {
+   section .container .bottom .card{
+      width: 40%;
+   }
+}
+</style>
