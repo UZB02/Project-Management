@@ -1,6 +1,5 @@
 <template >
     <!-- component -->
-    <section>
         <div class="container flex">
            <div class="h-screen sticky top-0 left-0">
              <AppNavigation/>
@@ -14,7 +13,6 @@
                 </div>
             </div>
         </div>
-    </section>
 </template>
 <script setup>
 import { RouterView } from 'vue-router';

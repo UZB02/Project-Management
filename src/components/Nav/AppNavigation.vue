@@ -1,5 +1,5 @@
 <template>
-    <aside id="default-sidebar" style="transition: all .3s linear;" :class="isOpen ? 'w-20  sticky  left-0 z-40 h-screen transition-transform -translate-x-full sm:translate-x-0' : 'w-60  sticky left-0 z-40 h-screen transition-transform -translate-x-full sm:translate-x-0'" aria-label="Sidebar">
+    <aside id="default-sidebar" style="transition: all .3s linear;" :class="isOpen ? 'w-20  sticky  left-0 z-40 h-screen transition-transform  sm:translate-x-0' : 'sidebar w-60  sticky left-0 z-40 h-screen transition-transform  sm:translate-x-0'" aria-label="Sidebar">
    <div class="h-full px-3 overflow-y-auto bg-white dark:bg-gray-800">
     <div :class="isOpen ? 'flex flex-col-reverse w-full py-3 gap-2 items-center justify-center' : 'w-full  flex items-center py-3 justify-between'">
        <button @click="toggleOpen" class="bg-gray-100 p-2 rounded-md">
@@ -58,8 +58,4 @@ a.router-link-active:hover svg{
 /* .ifrouter:hover svg{
   fill: gray;
 } */
-svg{
-    fill: gre;
-}
-    
 </style>
