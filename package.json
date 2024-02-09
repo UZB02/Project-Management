@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "flowbite": "^2.2.1",
     "pinia": "^2.1.7",
     "vue": "^3.4.15",

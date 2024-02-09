@@ -1,35 +1,76 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import AOS from "aos";
+import 'aos/dist/aos.css';
 import HomeView from '../views/HomeView.vue'
-import Sidebar from "../views/sidebar/Main.vue"
-import Navbar from "../views/nav_bar/Main.vue"
+import About from "../views/AboutView.vue"
+import Bazaviy from "../views/bazaviy/Main.vue"
+import Loyiha from "../views/loyiha/Main.vue"
+
+import AppLayoutVue from '@/layout/AppLayout.vue'
+import LoginLayout from '@/layout/LoginLayout.vue'
+import LoginView from '@/views/LoginView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    // {
+    //   path: '',
+    //   component: AppLayoutVue,
+    //   chilren: [
+    //     {
+    //       path: '/test',
+    //       name: 'home',
+    //       component: HomeView,
+    //     },
+    //   ]
+    // },
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
+      meta: {
+        layout: AppLayoutVue
+      }
     },
     {
-      path: '/sidebar',
-      name: 'sidebar',
-      component: Sidebar
+      path: '/bazaviy',
+      name: 'bazaviy',
+      component: Bazaviy,
+      meta: {
+        layout: AppLayoutVue
+      }
     },
     {
-      path: '/navbar',
-      name: 'navbar',
-      component: Navbar
+      path: '/loyiha',
+      name: 'loyiha',
+      component: Loyiha,
+      meta: {
+        layout: AppLayoutVue
+      }
     },
     {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
-    }
+      component: About,
+      meta: {
+        layout: AppLayoutVue
+      }
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: LoginView,
+      meta: {
+        layout: LoginLayout
+      }
+    },
+
+
   ]
 })
+router.beforeEach((to, from, next) => {
+  AOS.init(); // Initialize AOS
+  next();
+});
 
 export default router
