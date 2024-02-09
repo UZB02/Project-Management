@@ -12,17 +12,19 @@
                     </button>
       <h1 class='text-blue-500 font-sans text-2xl font-bold text-center uppercase' style='text-shadow:0 0 1px gray'>PM</h1>
     </div>
-      <ul v-for="item in AppNavUrl" class="flex items-center justify-center space-y-2 font-medium">
-        <RouterLink :data-tooltip-target="item.id" data-tooltip-placement="right"  :to="item.url" :class="isOpen ? 'ifrouter w-10 router mt-2 flex items-center p-2 text-gray-900  hover:bg-blue-500 rounded-lg' : 'router w-full mt-2 flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-blue-500 hover:text-white dark:hover:bg-gray-700 group'">
-           <div v-html="item.svg" style="fill: gray;"></div>
-            <span :class="isOpen ? 'hidden' : 'ms-3 text-xs'">{{ item.name }}</span>
-            <!-- <span :class="isOpen ? 'absolute  translate-x-10 ' : 'hidden'">{{ item.name }}</span> -->
-        </RouterLink>
-           <span :id="item.id"  role="tooltip" :class="isOpen ? 'absolute z-10 invisible inline-block px-3 py-2 text-sm w-48 font-medium text-white bg-blue-500 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700' : 'hidden'">
-        {{ item.name }}
-        <div class="tooltip-arrow" data-popper-arrow></div>
-    </span>
-      </ul>
+    <div class="pt-7">
+        <ul v-for="item in AppNavUrl" class="flex items-center justify-center space-y-2 font-medium">
+          <RouterLink :data-tooltip-target="item.id" data-tooltip-placement="right"  :to="item.url" :class="isOpen ? 'ifrouter w-10 router mt-2 flex items-center p-2 text-gray-900  hover:bg-blue-500 rounded-lg' : 'router w-full mt-2 flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-blue-500 hover:text-white dark:hover:bg-gray-700 group'">
+             <div v-html="item.svg" style="fill: gray;"></div>
+              <span :class="isOpen ? 'hidden' : 'ms-3 text-xs'">{{ item.name }}</span>
+              <!-- <span :class="isOpen ? 'absolute  translate-x-10 ' : 'hidden'">{{ item.name }}</span> -->
+          </RouterLink>
+             <div :id="item.id"  role="tooltip" :class="isOpen ? 'absolute z-10 invisible inline-block px-3 py-2 text-sm w-48 font-medium text-white bg-blue-500 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700' : 'hidden'">
+          <h1>{{ item.name }}</h1>
+          <div class="tooltip-arrow" data-popper-arrow></div>
+      </div>
+        </ul>
+    </div>
    </div>
 </aside>
 </template>

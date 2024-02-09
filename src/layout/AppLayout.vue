@@ -1,6 +1,6 @@
 <template >
     <!-- component -->
-        <div class="container flex">
+        <div class="container flex" style="margin: 0 auto;">
            <div class="h-screen sticky top-0 left-0">
              <AppNavigation/>
            </div>
