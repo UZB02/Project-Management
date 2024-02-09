@@ -4,11 +4,11 @@
            <div class="h-screen sticky top-0 left-0">
              <AppNavigation/>
            </div>
-            <div class="w-full rounded-md bg-blue-100">
+            <div class="w-full rounded-md bg-gray-100">
                  <header class="sticky top-0 z-50">
                 <Nav/>
             </header>
-                <div class="rounded-md p-3">
+                <div class="rounded-md p-1">
                     <RouterView/>
                 </div>
             </div>
