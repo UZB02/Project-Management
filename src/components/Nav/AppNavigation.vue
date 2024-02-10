@@ -1,5 +1,5 @@
 <template>
-    <aside id="default-sidebar" style="transition: all .3s linear;" :class="isOpen ? 'w-20  sticky  left-0 z-40 h-screen transition-transform  sm:translate-x-0' : 'sidebar w-60  sticky left-0 z-40 h-screen transition-transform  sm:translate-x-0'" aria-label="Sidebar">
+    <aside id="default-sidebar" style="transition: all .3s linear;" :class="isOpen ? 'w-20  sticky  left-0 z-50 h-screen transition-transform  sm:translate-x-0' : 'sidebar w-60  sticky left-0 z-50 h-screen transition-transform  sm:translate-x-0'" aria-label="Sidebar">
    <div class="h-full px-3 overflow-y-auto bg-white dark:bg-gray-800">
     <div :class="isOpen ? 'flex flex-col-reverse w-full py-3 gap-2 items-center justify-center' : 'w-full  flex items-center py-3 justify-between'">
        <button @click="toggleOpen" class="bg-gray-100 p-2 rounded-md">
@@ -13,13 +13,13 @@
       <h1 class='text-blue-500 font-sans text-2xl font-bold text-center uppercase' style='text-shadow:0 0 1px gray'>PM</h1>
     </div>
     <div class="pt-7">
-        <ul v-for="item in AppNavUrl" class="flex items-center justify-center space-y-2 font-medium">
-          <RouterLink :data-tooltip-target="item.id" data-tooltip-placement="right"  :to="item.url" :class="isOpen ? 'ifrouter w-10 router mt-2 flex items-center p-2 text-gray-900  hover:bg-blue-500 rounded-lg' : 'router w-full mt-2 flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-blue-500 hover:text-white dark:hover:bg-gray-700 group'">
+        <ul v-for="item in AppNavUrl" class="flex z-50 items-center justify-center space-y-2 font-medium">
+          <RouterLink :data-tooltip-target="item.id" data-tooltip-placement="right"  :to="item.url" :class="isOpen ? 'ifrouter w-50 router mt-2 flex items-center p-2 text-gray-900  hover:bg-blue-500 rounded-lg' : 'router w-full mt-2 flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-blue-500 hover:text-white dark:hover:bg-gray-700 group'">
              <div v-html="item.svg" style="fill: gray;"></div>
               <span :class="isOpen ? 'hidden' : 'ms-3 text-xs'">{{ item.name }}</span>
               <!-- <span :class="isOpen ? 'absolute  translate-x-10 ' : 'hidden'">{{ item.name }}</span> -->
           </RouterLink>
-             <div :id="item.id"  role="tooltip" :class="isOpen ? 'absolute z-10 invisible inline-block px-3 py-2 text-sm w-48 font-medium text-white bg-blue-500 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700' : 'hidden'">
+             <div :id="item.id"  role="tooltip" :class="isOpen ? 'absolute z-50 invisible inline-block px-3 py-2 text-sm w-48 font-medium text-white bg-blue-500 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700' : 'hidden'">
           <h1>{{ item.name }}</h1>
           <div class="tooltip-arrow" data-popper-arrow></div>
       </div>
